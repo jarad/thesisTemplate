@@ -7,3 +7,12 @@
 chapter1/
 chapter2/
 chapter3/
+
+# LaTeX files
+*.aux
+*.log
+*.lot
+*.synctex.gz
+*.toc
+
+thesis.pdf
