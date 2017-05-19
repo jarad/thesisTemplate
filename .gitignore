@@ -14,5 +14,6 @@ chapter3/
 *.lot
 *.synctex.gz
 *.toc
+*.lof
 
 thesis.pdf

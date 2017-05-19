@@ -1,19 +1,30 @@
 % Template file for a standard thesis
 \documentclass[11pt]{isuthesis}
 \usepackage[pdftex]{graphicx}
+
 % Standard, old-style thesis
 \usepackage{isutraditional}   \chaptertitle
+
 % Old-style, thesis numbering down to subsubsection
 \alternate
 \usepackage{rotating}
+
 % Bibliography without numbers or labels
 \usepackage{natbib}
-
 \bibliographystyle{apa}
+
 %\includeonly{titletoc,chapter1}
+
 %Optional Package to add PDF bookmarks and hypertext links
 \usepackage[pdftex,hypertexnames=false,linktocpage=true]{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,anchorcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue,bookmarksnumbered=true,pdfview=FitB}
+
+% Use import if there are .tex files called from chapter1.tex (a table for instance) 
+\usepackage{import}
+
+% include path for figures
+\graphicspath{{chapter1Template/figures_tables/}}
+
 \begin{document}
 \DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png}
 \include{titlepage}
@@ -29,6 +40,7 @@
 \listoffigures
 % Comment out the next line if NOT using chaptertitle
 \addtocontents{toc}{\def\protect\@chapapp{CHAPTER\ }}
+
 %Optional Acknowledgements
 
 \cleardoublepage \phantomsection
@@ -40,7 +52,13 @@
 
 \newpage
 \pagenumbering{arabic}
-\include{chapter1Template/chapter1}
+
+\include{introduction}
+
+%\include{chapter1Template/chapter1}
+% if using import package
+\import{chapter1Template/}{chapter1}
+
 %\include{chapter2/chapter2}
 %\include{chapter3/chapter3}
 
