@@ -5,25 +5,27 @@
 % Standard, old-style thesis
 \usepackage{isutraditional}   \chaptertitle
 
+
 % Old-style, thesis numbering down to subsubsection
 \alternate
 \usepackage{rotating}
+
 
 % Bibliography without numbers or labels
 \usepackage{natbib}
 \bibliographystyle{apa}
 
-%\includeonly{titletoc,chapter1}
 
 %Optional Package to add PDF bookmarks and hypertext links
 \usepackage[pdftex,hypertexnames=false,linktocpage=true]{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,anchorcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue,bookmarksnumbered=true,pdfview=FitB}
 
 % Use import if there are .tex files called from chapter1.tex (a table for instance) 
-\usepackage{import}
+\usepackage{import} 
 
 % include path for figures
 \graphicspath{{chapter1Template/figures_tables/}}
+
 
 \begin{document}
 \DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png}
@@ -41,32 +43,27 @@
 % Comment out the next line if NOT using chaptertitle
 \addtocontents{toc}{\def\protect\@chapapp{CHAPTER\ }}
 
-%Optional Acknowledgements
 
-\cleardoublepage \phantomsection
-\include{acknowlegements}
 
-%Optional thesis abstract
-\cleardoublepage \phantomsection
-\include{abstract}
+\cleardoublepage \phantomsection \include{acknowlegements} % optional
+\cleardoublepage \phantomsection \include{abstract}        % optional
+
+
 
 \newpage
 \pagenumbering{arabic}
 
 \include{introduction}
 
-%\include{chapter1Template/chapter1}
-% if using import package
 
 \chapter{THIS IS THE TITLE OF THE FIRST PAPER}
 \paperinfo{published in the Journal of ABC}
 \paperauthor{Jane Smith and Jesse Adams}
 \import{chapter1Template/}{chapter1}
+%\include{chapter1Template/chapter1} 
 
-%\include{chapter2/chapter2}
-%\include{chapter3/chapter3}
 
-\appendixtitle
+\appendixtitle 
 \appendix
 \include{appendix1}
 \include{appendix2}
