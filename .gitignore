@@ -10,10 +10,10 @@ chapter3/
 
 # LaTeX files
 *.aux
+*.lof
 *.log
 *.lot
 *.synctex.gz
 *.toc
-*.lof
 
 thesis.pdf
