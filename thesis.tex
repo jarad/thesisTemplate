@@ -18,13 +18,22 @@
 
 %Optional Package to add PDF bookmarks and hypertext links
 \usepackage[pdftex,hypertexnames=false,linktocpage=true]{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue,anchorcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue,bookmarksnumbered=true,pdfview=FitB}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  anchorcolor=blue,
+  citecolor=blue,
+  filecolor=blue,
+  urlcolor=blue,
+  bookmarksnumbered=true,
+  pdfview=FitB
+}
 
 % Use import if there are .tex files called from chapter1.tex (a table for instance) 
 \usepackage{import} 
 
 % include path for figures
-\graphicspath{{chapter1Template/figures_tables/}}
+\graphicspath{{paper1/figures_tables/}}
 
 
 \begin{document}
@@ -57,10 +66,12 @@
 
 
 \chapter{THIS IS THE TITLE OF THE FIRST PAPER}
-\paperinfo{published in the Journal of ABC} % only include if paper has been submitted
-\paperauthor{Jane Smith and Jesse Adams}    % only include if paper has been submitted
-\import{chapter1Template/}{chapter1}
-%\include{chapter1Template/chapter1} 
+
+% only include the following lines if the manuscript has been submitted
+\paperinfo{published in the Journal of ABC} 
+\paperauthor{Jane Smith and Jesse Adams}    
+
+\import{paper1/}{content1}
 
 
 \appendixtitle 
